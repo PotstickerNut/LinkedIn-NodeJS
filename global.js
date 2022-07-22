@@ -1,4 +1,8 @@
-const hello = "Hello World from Node.js";
-const justNode = hello.slice(17);
+const path = require("path");
 
-console.log(`Who let the ${justNode} out`);
+console.log(__dirname);
+console.log(`The file name is ${path.basename(__filename)}`);
+
+for (let key in global) {
+  console.log(key);
+}
